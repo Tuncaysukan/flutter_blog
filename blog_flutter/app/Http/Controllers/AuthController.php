@@ -60,6 +60,7 @@ class AuthController extends Controller
             'token'=>auth()->user()->createToken('secret')->plainTextToken
         ],200);
     }
+    
     // logout action 
     public function logout()
     {
