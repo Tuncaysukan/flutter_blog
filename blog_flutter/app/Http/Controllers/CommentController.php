@@ -5,8 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Post;
 use App\Models\Comment;
-use App\Models\User;
-use App\Models\Like;
+ 
 
 
 class CommentController extends Controller
@@ -15,7 +14,9 @@ class CommentController extends Controller
       public function index($id)
       {
           
-          $post = Post::find($id);
+            $post = Post::find($id);
+
+      
          
           if(!$post)
           {
@@ -23,10 +24,12 @@ class CommentController extends Controller
                   'message' => 'Post not found.'
               ], 403);
           }
-         
+        
           return response([
-              'comments' => $post->comments()->with('user:id,name,image')->get()
-          ], 200);
+            'comment' => $post->comment()->with('user:id,name,image')->get()
+        ], 200);
+         
+          
       }
       // create a comment
     public function store(Request $request, $id)
