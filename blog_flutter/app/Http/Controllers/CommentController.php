@@ -3,21 +3,27 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Post;
+use App\Models\Comment;
+use App\Models\User;
+use App\Models\Like;
+
 
 class CommentController extends Controller
 {
       // get all comments of a post
       public function index($id)
       {
+          
           $post = Post::find($id);
-  
+         
           if(!$post)
           {
               return response([
                   'message' => 'Post not found.'
               ], 403);
           }
-  
+         
           return response([
               'comments' => $post->comments()->with('user:id,name,image')->get()
           ], 200);

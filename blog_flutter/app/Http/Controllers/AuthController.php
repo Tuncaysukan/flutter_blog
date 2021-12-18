@@ -41,7 +41,7 @@ class AuthController extends Controller
     {
         $attr=$request->validate([
      
-            'email'=>'required|email|unique:users,email',
+            'email'=>'required|email',
             'password'=>'required|min:6',
         ]);
 
