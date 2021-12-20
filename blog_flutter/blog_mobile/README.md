@@ -1,16 +1,14 @@
-# blog_mobile
+# Flutter Blog App
 
-A new Flutter project.
+A Flutter blog application, part of youtube tutorial project.
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+This project is developed with Flutter v2.2+ and requires an api
 
-A few resources to get you started if this is your first Flutter project:
+ - clone or fork the repo
+ - install required pub packages
+ - Edit `constant.dart` file and put your domain address
+ - run the app
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+ The backend (api) is developed with Laravel 8 you can get it [Here](https://github.com/habibmhamadi/laravel8-blog-api)
